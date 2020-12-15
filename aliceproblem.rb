@@ -9,8 +9,6 @@ def gets_leaderboard_values
     scores = gets.chomp.split(' ').map(&:to_i)
     if no_of_players != scores.length
         puts "\nErr----The number of players should equal to the scores you put or vice versa\n\n"
-        no_of_players=nil
-        scores=[]
         gets_leaderboard_values
     else
         return no_of_players , scores 
@@ -28,8 +26,6 @@ def gets_alice_values
     scores= gets.chomp.split(' ').map(&:to_i)
     if no_of_games != scores.length
         puts "Err-------number of alice games should equal to the scores of the alice games \n\n"
-        no_of_games=nil
-        scores=[]
         gets_alice_values
     else
         return no_of_games , scores 
