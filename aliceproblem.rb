@@ -1,4 +1,4 @@
-# getting inputs of leaderboard
+# ---------- getting inputs of leaderboard ----------
 def gets_leaderboard_values
     puts "Enter the number of players on the leaderboard e.g 5"
     no_of_players= gets.chomp.to_i
@@ -11,7 +11,7 @@ def gets_leaderboard_values
     return no_of_players , scores 
 end
 
-# getting input of alice games
+# --------- getting input of alice games ------------
 def gets_alice_values 
     puts "Enter the number of games that alice played"
     no_of_players= gets.chomp.to_i
@@ -24,16 +24,16 @@ def gets_alice_values
     return no_of_players , scores 
 end
 
-# merging all inputs into one function
+# ---------- merging all inputs into one function ---------
 def gets_inputs
     leaderboard_output = gets_leaderboard_values()
     alice_output = gets_alice_values()
     return leaderboard_output[1] , alice_output[1]
 end
 
-# Main functiion for getting ranks
+# --------- Main functiion for getting ranks----------
 def climbingLeaderboard(leaderboard , alice ) 
-    leaderboard = leaderboard | alice 
+    leaderboard = (leaderboard.concat(alice)).uniq.sort{| a ,b | b <=> a}
     ranks = []
     alice.each do | a_value|
         ranks << leaderboard.index(a_value) + 1
