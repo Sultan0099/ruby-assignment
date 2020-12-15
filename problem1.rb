@@ -35,14 +35,13 @@ def climbingLeaderboard(leaderboard_scores , alice_scores )
         leaderboard_scores: leaderboard_scores ,
         alice_scores: alice_scores,
         alice_ranks: alice_ranks,
-        alice_ranks_map: alice_ranks_map
     }   
 
     return output 
 end
 
 leaderboard_scores = [100, 90, 90 , 80 ,60]
-alice_scores = [50, 70 , 80 , 100 ]
+alice_scores = [50, 70 , 80 , 65, 100 ]
 
 # the output is in the form of hash
 p climbingLeaderboard(leaderboard_scores , alice_scores)
