@@ -26,7 +26,13 @@ end
 
 # ---------- merging all inputs into one function ---------
 def gets_inputs
+    puts "\n"
+    puts "----------------------leaderboard inputs-------------------\n"
+    puts "\n"
     leaderboard_output = gets_leaderboard_values()
+    puts "\n"
+    puts "-----------------------alice inputs------------------------\n"
+    puts "\n"
     alice_output = gets_alice_values()
     return leaderboard_output[1] , alice_output[1]
 end
@@ -39,10 +45,12 @@ def climbingLeaderboard(leaderboard , alice )
         ranks << leaderboard.index(a_value) + 1
     end
 
-    p leaderboard
     return ranks 
 end
 
 leaderboar_score , alice_score  = gets_inputs
 
+puts "\n"
+puts "----------- Alice ranks -----------"
+puts "\n"
 p climbingLeaderboard(leaderboar_score , alice_score)
